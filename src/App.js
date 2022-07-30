@@ -1,8 +1,11 @@
+import Upload from './components/Upload'
+import ErrorBoundary from './components/ErrorBoundary'
+
 function App() {
   return (
-    <div className='text-sky-400'>
-      <h1>Hi!</h1>
-    </div>
+    <ErrorBoundary>
+      <Upload />
+    </ErrorBoundary>
   )
 }
 

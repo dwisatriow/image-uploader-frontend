@@ -1,8 +1,15 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        'noto-sans': ['Noto Sans', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   variants: {},
-  plugins: [],
+  plugins: [require('prettier-plugin-tailwindcss')],
 }
